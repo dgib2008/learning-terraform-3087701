@@ -14,7 +14,7 @@ data "aws_ami" "app_ami" {
   owners = ["amazon"] # Bitnami
 }
 
-resource "aws_instance" "blog" {
+resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
